@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
 import { Button } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
 import InboxIcon from '@mui/icons-material/Inbox';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import NoteOutlinedIcon from '@mui/icons-material/NoteOutlined';
@@ -21,6 +20,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
 function Sidebar() {
     const dispatch = useDispatch();
@@ -34,7 +34,7 @@ function Sidebar() {
    return (
        <div className="sidebar">
             <Button 
-            startIcon={<AddIcon fontSize='large'/>} 
+            startIcon={<EditOutlinedIcon fontSize='15px'/>} 
             className="sidebar__compose"
             onClick={() => dispatch(openSendMessage())} 
             >

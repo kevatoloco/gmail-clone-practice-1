@@ -3,23 +3,28 @@
     align-items: center;
     border-bottom-width: 2px;
     padding: 15px;
-    min-width: 200px;
+    min-width: 220px;
     cursor: pointer;
-    color: grey;
+    color: #444746;
     border-width: 0px !important;
+    background-color: white;
+  
 }
 
 .section--selected {
-    background-color: whitesmoke;
     border-width: 3px !important;
 }
 
 .section:hover {
-    background: whitesmoke;
-    border-width: 3px !important;
+    background-color: whitesmoke;
 }
 
 .section > h4 {
     font-size: 14px;
+    font-weight: 550;
     margin-left: 15px;
+}
+
+.section > .MuiSvgIcon-root {
+    font-size: 20px;
 }

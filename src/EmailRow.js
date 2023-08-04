@@ -1,7 +1,6 @@
 import React from 'react';
 import './EmailRow.css';
-import Checkbox from '@material-ui/core/Checkbox';
-import LabelImportantOutlinedIcon from '@mui/icons-material/LabelImportantOutlined';
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import StarBorderOutlinedIcon  from '@mui/icons-material/StarBorderOutlined';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -25,9 +24,8 @@ function EmailRow({ id, title, subject, description, time }) {
    return (
        <div onClick={openMail} className="emailRow">
             <div className="emailRow__options">
-                <Checkbox />
+                <CheckBoxOutlineBlankIcon />
                 <StarBorderOutlinedIcon />
-                <LabelImportantOutlinedIcon />
             </div>
 
             <h3 className="emailRow__title">
@@ -38,13 +36,13 @@ function EmailRow({ id, title, subject, description, time }) {
                 <h4>
                     {subject}{" "}
                     <span className="emailRow__description">
-                        {description}
+                        {"-"}{" "}{description}
                     </span>
                 </h4>
             </div>
 
-            <p className="emailRow__description">
-                {time}
+            <p className="emailRow__time">
+                {time}{"PM"}
             </p>
 
        </div>

@@ -5,7 +5,6 @@ import Sidebar from './Sidebar';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Mail from './Mail';
 import EmailList from './EmailList';
-import EmailRow from './EmailRow';
 import SendMail from './SendMail';
 import Login from './Login';
 import { useSelector } from 'react-redux';
@@ -13,6 +12,8 @@ import { selectSendMessageIsOpen } from './features/mailSlice';
 import { login, selectUser} from './features/userSlice';
 import { auth } from './firebase';
 import { useDispatch } from 'react-redux';
+import Widgets from './Widgets';
+import EmailRow from './EmailRow';
 
 
 function App() {
@@ -42,12 +43,14 @@ function App() {
       <div className="app">
         <Header />
         <div className="app__body">
-        <Sidebar />
+          <Sidebar />
 
-        <Routes>
-          <Route path="/mail" element={<Mail />} />
-          <Route index path="/" element={<EmailList />} />
-        </Routes>
+          <Routes>
+            <Route path="/mail" element={<Mail />} />
+            <Route index path="/" element={<EmailList />} />
+          </Routes>
+
+          <Widgets />
         </div>
 
         {sendMessageIsOpen && <SendMail />}

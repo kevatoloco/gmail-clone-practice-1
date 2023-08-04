@@ -12,7 +12,7 @@ function Section({ Icon, title, color, selected }) {
             <Icon />
             <h4>{title}</h4>
        </div>
-   )
+   );
 }
 
 
