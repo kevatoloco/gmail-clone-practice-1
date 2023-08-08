@@ -21,6 +21,9 @@ function EmailRow({ id, title, subject, description, time }) {
         navigate("./mail");
     };
 
+    const mailTime = time.split(" ")[4] ? time.split(" ")[4].substring(1, 5) : '';
+
+
    return (
        <div onClick={openMail} className="emailRow">
             <div className="emailRow__options">
@@ -42,7 +45,7 @@ function EmailRow({ id, title, subject, description, time }) {
             </div>
 
             <p className="emailRow__time">
-                {time}{"PM"}
+                {mailTime}{" PM"}
             </p>
 
        </div>

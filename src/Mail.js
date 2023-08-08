@@ -32,6 +32,7 @@ function Mail() {
     const navigate = useNavigate();
     const selectedMail = useSelector(selectOpenMail);
     const user = useSelector(selectUser);
+    const mailTime = selectedMail?.time.substring(0, 22);
 
    return (
        <div className="mail">
@@ -70,13 +71,15 @@ function Mail() {
                 </div>
                 <div className="mail__to">
                     <Avatar className="mail__avatar" src={user?.photoURL} />
-                    <h5 className="mail__title">{selectedMail?.title}</h5>
-                    <p className="mail__time">{selectedMail?.time}</p>
-                    <div className="mail__toRight">
-                        <StarBorderOutlinedIcon />
-                        <UndoOutlinedIcon />
-                        <MoreVertOutlinedIcon />
+                    <div className="mail__title">
+                        <h5>{selectedMail?.title}</h5>
+                        <p className="mail__time">{mailTime}{" PM"}</p>
+                        <div className="mail__toRight">
+                            <StarBorderOutlinedIcon />
+                            <UndoOutlinedIcon />
+                            <MoreVertOutlinedIcon />
                     </div>      
+                    </div>
                 </div>
                 <p className="mail__toText">to me</p>
                 <div className="mail__message">

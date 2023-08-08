@@ -57,7 +57,7 @@ function SendMail() {
                 <input placeholder='Subject' type="text" id="subject" {...register("subject", { required: { value: true, message: "Subject is required", },})}/>
                 <p className="sendMail__error">{errors.subject?.message}</p>
 
-                <input className="sendMail__message" type="text" id="message" {...register("message", { required: { value: true, message: "Message is required", },})}/>
+                <textarea className="sendMail__message" type="text" id="message" {...register("message", { required: { value: true, message: "Message is required", },})}/>
                 <p className="sendMail__error">{errors.message?.message}</p>
 
 

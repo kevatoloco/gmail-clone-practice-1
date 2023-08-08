@@ -125,5 +125,7 @@
 
 .sendMail__message {
     flex: 1;
+    border: none;
+    padding: 15px;
 }
 
